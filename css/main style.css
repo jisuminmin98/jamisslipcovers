@@ -1,0 +1,231 @@
+@charset "utf-8";
+/* CSS Document */
+@import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@300&display=swap');
+*{ scroll-behavior: smooth}
+body
+{background-color:#F8F5EE; /*màu nền trang web*/
+	color:#000;
+	font-family: 'IBM Plex Sans',Cambria, "Hoefler Text", "Liberation Serif", Times, "Times New Roman", "serif" ;margin:0;}
+h1{font-size: 33px;
+color: #CE8B45}
+h3{font-size: 22px;}
+h2{font-size: 26px}
+h4{font-size: 20px}
+h5{font-size: 17px}
+h1, h2, h3, h4, h5, h6
+{font-family: Cambria, "Hoefler Text", "Liberation Serif", Times, "Times New Roman", "serif"}
+
+*{box-sizing: border-box}
+.col-1 {width: 8.333333%}
+.col-2 {width: 16.66%}
+.col-3 {width: 25%}
+.col-4 {width: 33.33333%}
+.col-5 {width: 41.66%}
+.col-6 {width: 50%}
+.col-7 {width: 58.33%;}
+.col-8 {width: 66.66%;}
+.col-9 {width: 75%;}
+.col-10 {width: 83.33%;}
+.col-11 {width: 91.66%;}
+.col-12 {width: 100%;}
+.container{width: 80%; margin: auto}
+[class*="col-"]
+{padding:15px}
+
+.img-100 {width: 100%; height: auto}
+.row{display: flex; flex-wrap: wrap; padding: 0 10px}
+
+/* gióng theo chiều dọc các box trong 1 row có flex */
+
+.align-items-center{align-items:center}
+.align-items-top{align-items:flex-start}
+.align-items-bottom{align-items:flex-end}
+
+/* gióng theo chiều ngang các box trong 1 row có flex */
+.justify-center{justify-content: center}
+.justify-start{justify-content:flex-start}
+.justify-end{justify-content:flex-end}
+.justify-between{justify-content:space-between}
+.justify-around{justify-content:space-around}
+
+.text-yellow { color: #F7960C}
+
+section{ padding: 33px 0;}
+
+p{line-height:1.5rem}
+
+.text-left{text-align:left}
+.text-center{text-align:center}
+.text-right{text-align:right}
+
+nav {background: #F8F5EE;
+position:fixed;
+width: 100%;
+padding: 10px 20px;
+box-shadow: 0 3px 8px rgba(0,0,0,0.1);
+z-index: 999;
+font-size: 14px;
+font-weight: 500
+}
+
+nav .container {display:flex; justify-content:space-around; align-items:flex-end}
+
+nav a.logo img {width:170px ;height:auto}
+
+nav .menu ul {
+	margin: 0;
+	padding: 0px;
+	list-style:none;
+	display: flex;
+	margin-bottom: 10px;
+	perspective: 100px;
+}
+
+nav .menu ul li {position: relative;}
+
+nav .menu ul li a{color: #000; text-decoration: none; padding: 10px 20px; text-transform: uppercase;}
+
+nav .menu ul li a:hover { color: #CE8B45
+}
+nav .menu ul li a.active{ color: #CE8B45;}
+
+nav .menu ul ul {
+	display: block;
+	background-color:#F8F5EE;
+	position:absolute;
+	left: 0px;
+	top: 100%;
+	width: 260px;
+	transition: all 0.7s;
+	visibility: hidden;
+	opacity: 0;
+	z-index: 9999;
+	transform: rotateX(-90deg);
+	transform-origin: left top;
+}
+nav .menu ul li:hover >ul {
+	top: 100% ; left: 0; visibility: visible; opacity: 1; transform: rotateX(0deg);
+}
+nav .menu ul ul a {display: block}
+
+nav .menu ul ul ul {
+	display: block;
+	background-color:#F8F5EE;
+	position:absolute;
+	left: 120%;
+	top: 0;
+	width: 222px;
+	transition: all 0.7s;
+	visibility: hidden;
+	opacity: 0;
+	z-index: 9999;
+	transform: rotatey(0deg);
+	transform-origin: right top;
+}
+nav .menu ul ul li:hover >ul {
+	top: 0% ; left: 100%; visibility: visible; opacity: 1; transform: rotateY(0deg);
+}
+#vung0 {
+	padding-top: 96px;
+}
+
+.btn-primary
+{background:#F8F5EE;
+	color:#CE8B45;
+	padding: 10px 20px ; text-decoration: none; border: 0px; border-radius: 30px;}
+
+.btn-primary:hover
+{ background-color:#CE8B45;
+color:#F8F5EE}
+
+.card-overlay{	
+	position: relative;
+	overflow: hidden
+}/* tao quan he voi box con de box con dat vi tri theo dien tich cua box me*/
+.card-overlay h4 
+{ 	position: absolute; 
+	background:#CE8B45; 	color:#F8F5EE; 
+	left: -270px; bottom: 60px; 
+	padding: 10px 15px
+}
+.card-overlay h1 
+{
+	position: absolute;
+	color: #fff; 
+
+	opacity: 0; visibility: hidden;
+}
+.card-overlay img ,
+.card-overlay h4,
+.card-overlay h1 
+{ 
+	transition: all 1s
+}
+.card-overlay:hover >img { 
+	transform: scale(1.1) 
+}
+.card-overlay:hover >h4{ left: 15px}
+.card-overlay:hover > h1{ left: 15px;bottom: 15px; opacity: 1; visibility: visible; color:#fff}
+.container .row {display:flex; justify-content:space-between; align-items:center;}
+
+#email{
+	padding: 5 0;}
+
+#email a {
+	text-decoration: none;
+	color:#747373 
+}
+#email a:hover {
+	color:#CE8B45
+}
+#footer2 {
+	font-size:13px;
+	color:#454545;
+	background-color:#DDDBD6;
+	height: 80px;
+	padding: 5px 0
+}
+#footer1 {
+	font-size:15px;
+	color:#454545;
+	background-color:#EDECE7
+}
+#vung-giua {
+	font-size:18px;
+	color:#000;
+	background-color:#EDECE7
+}
+
+#vung1{
+height: 200px;
+	padding: 0px 0;	
+}
+#ban-chay h2{
+	color: #E44C4F;
+}
+#ban-chay h4{
+	color:#626060;
+	text-decoration: line-through
+}
+
+#banner .item
+{
+	position: relative
+}
+#banner .item .banner-caption
+{
+	position: absolute;
+	/*border: 5px solid red;*/
+	width: 100%;
+	left: 0%;
+	top: 20%; 
+	color: #fff; text-align: center
+}
+#banner .item .banner-caption h1
+{ color: #fff}
+#banner .item .banner-caption h5{
+	font-family: 'IBM Plex Sans';
+	font-size: 20px;
+	color: #CE8B45
+}
+
